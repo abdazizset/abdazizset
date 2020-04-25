@@ -8,9 +8,9 @@
     <body>
         <nav>
             <div class="menu-mobile">
-                <a href="#">Menu</a>
+                <a href="#" onclick="showMenu()">Menu</a>
             </div>
-           <ul>
+           <ul id="menu">
                   <li><a href="#">HOME</a></li>
                  <li><a href="#">PRODUCT</a></li>
                  <li><a href="#">GALLERY</a></li>
@@ -89,4 +89,18 @@
 
 
     </body>
+    <script>
+        function showMenu(){
+            let menu = document.getElementById("menu");
+            let box = document.getElementById("box-profile");
+
+            if(menu.style.display === "block"){
+                menu.style.display = "none";
+                box.style.paddingTop = "0px";
+            }else{
+                menu.style.display = "block";
+                box.style.paddingTop = "125px";
+            };
+        }
+    </script>
 </html>
